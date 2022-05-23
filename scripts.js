@@ -4,19 +4,24 @@
     let computerSelection;
     let promptUser;
     let playerSelection;
+    const choices = ["rock", "paper", "scissors"];
 
     function computerPlay() {
 
-        let rand = Math.floor(Math.random() * 16);
-        console.log(rand);
-        if (rand <= 5) {
-            return ("rock");
-        }
-        else if (rand <= 10) {
-            return ("paper");
-        } else {
-            return ("scissors");
-        }
+        // let rand = Math.floor(Math.random() * 16);
+        // console.log(rand);
+        // if (rand <= 5) {
+        //     return ("rock");
+        // }
+        // else if (rand <= 10) {
+        //     return ("paper");
+        // } else {
+        //     return ("scissors");
+        // }
+        let rand = Math.floor(Math.random() * choices.length);
+        console.log(choices[rand]);
+        return (choices[rand]);
+
     }
 
     const playRound = (playerSelection, computerSelection) => {
