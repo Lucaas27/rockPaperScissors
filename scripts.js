@@ -1,9 +1,9 @@
 (function () {
     'use strict';
 
-    const promptUser = prompt("Rock, paper or scissors?", "")
-    let playerSelection = promptUser.toLowerCase();
-    let computerSelection = computerPlay();
+    let computerSelection;
+    let promptUser;
+    let playerSelection;
 
     function computerPlay() {
 
@@ -22,8 +22,8 @@
     const playRound = (playerSelection, computerSelection) => {
 
         if (playerSelection === computerSelection) {
-            console.log(`playerSelection: ${playerSelection}`);
-            console.log(`computerSelection: ${computerSelection}`);
+            // console.log(`playerSelection: ${playerSelection}`);
+            // console.log(`computerSelection: ${computerSelection}`);
             return `It's a draw ! You both chose ${playerSelection}.`
         }
         else if (
@@ -33,8 +33,8 @@
             ||
             playerSelection === "scissors" && computerSelection === "paper"
         ) {
-            console.log(`playerSelection: ${playerSelection}`);
-            console.log(`computerSelection: ${computerSelection}`);
+            // console.log(`playerSelection: ${playerSelection}`);
+            // console.log(`computerSelection: ${computerSelection}`);
             return `You Win! ${playerSelection} beats ${computerSelection}`
         }
         else if (
@@ -44,8 +44,8 @@
             ||
             computerSelection === "scissors" && playerSelection === "paper"
         ) {
-            console.log(`playerSelection: ${playerSelection}`);
-            console.log(`computerSelection: ${computerSelection}`);
+            // console.log(`playerSelection: ${playerSelection}`);
+            // console.log(`computerSelection: ${computerSelection}`);
             return `You Lose! ${computerSelection} beats ${playerSelection}`
         }
         else {
@@ -54,5 +54,14 @@
         }
     }
 
-    console.log(playRound(playerSelection, computerSelection));
+    function game() {
+        for (let index = 0; index < 5; index++) {
+            computerSelection = computerPlay();
+            promptUser = prompt("Rock, paper or scissors?", "")
+            playerSelection = promptUser.toLowerCase();
+            console.log(playRound(playerSelection, computerSelection));
+        }
+    }
+
+    game()
 })()
