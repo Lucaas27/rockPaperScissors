@@ -1,3 +1,169 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
 body {
-  background-color: aqua;
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --main-color: #041c32;
+  --secondary-color: #04293a;
+}
+
+body {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 40%;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.score > * {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  min-width: 100px;
+}
+.icon {
+  font-size: 1.3rem;
+}
+
+.game {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__choices-computer,
+.game__choices-player {
+  padding-top: 0.3rem;
+}
+
+.game__choices-computer > * {
+  background-color: #4c4c4c6b;
+  color: #474646b8;
+}
+button {
+  display: inline-block;
+  text-transform: capitalize;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+  background: transparent;
+  color: #fff;
+  box-shadow: 0 0 0 3px var(--main-color) inset;
+}
+
+.game__choices-player > button {
+  cursor: pointer;
+}
+
+.game__choices-player > button:hover {
+  transform: translateY(-2px);
+  background-color: var(--main-color);
+}
+
+.score__player > span,
+.score__computer > span {
+  display: block;
 }
