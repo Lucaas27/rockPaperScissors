@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Rock Paper Scissors</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script defer src="scripts.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Rock Paper Scissors</title>
-  <link href="styles.css" rel="stylesheet" type="text/css" />
-  <script src="scripts.js" defer ></script>
-</head>
-
-<body>
-  <header>Rock Paper Scissors</header>
-  <main>
-		<section class="score">
-      <div class="score__player">Player 
-        <span>0</span>
-      </div>
-      <div class="score__computer">Computer
-        <span>0</span>
-      </div>
-    </section>
-    <section class="game">
-      <article class="game__choices">
-				<p>Player</p>
-				<div class="game__choices-player">
-	        <button class="rock"><p class="icon">✊</p>Rock</button>
-	        <button class="paper"><p class="icon">✋</p>Paper</button>
-	        <button class="scissors"><p class="icon">✌️</p>Scissors</button>
-				</div>
-      </article>
-			<article class="game__choices">
-				<p>Computer</p>
-        <div class="game__choices-computer">
-        	<button class="rock"><p class="icon">✊</p>Rock</button>
-	        <button class="paper"><p class="icon">✋</p>Paper</button>
-	        <button class="scissors"><p class="icon">✌️</p>Scissors</button>
+  <body>
+    <header>Rock Paper Scissors</header>
+    <main>
+      <p class="main__text">Get 5 points and win the game!</p>
+      <section class="score">
+        <div>
+          Player
+          <span class="score__player">0</span>
         </div>
-      </article>
-    </section>
-		<section class="results">
-      <p >Player chose: <span class="results__player"></span></div>
-      <p >Computer chose: <span class="results__computer"></span></div>
-    </section>
-  </main>
-  <footer>Footer</footer>
-</body>
+        <div>
+          Computer
+          <span class="score__computer">0</span>
+        </div>
+      </section>
+      <section class="game">
+        <article class="game__choices">
+          <p>Player</p>
+          <div class="game__choices-player">
+            <button class="rock">✊ Rock</button>
+            <button class="paper">✋ Paper</button>
+            <button class="scissors">✌️ Scissors</button>
+          </div>
+        </article>
+        <article class="game__choices">
+          <p>Computer</p>
+          <div class="game__choices-computer">
+            <button class="comp-rock">✊ Rock</button>
+            <button class="comp-paper">✋ Paper</button>
+            <button class="comp-scissors">✌️ Scissors</button>
+          </div>
+        </article>
+      </section>
+      <section class="log"></section>
+    </main>
+    <footer>
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      by Lucas Gomes
+    </footer>
+  </body>
 </html>

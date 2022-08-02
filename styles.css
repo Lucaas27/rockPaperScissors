@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -5,6 +6,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 /*
   2. Remove default margin
@@ -99,6 +101,11 @@ footer {
   align-items: center;
 }
 
+header {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 .score {
   display: flex;
   text-align: center;
@@ -116,6 +123,7 @@ footer {
 }
 .icon {
   font-size: 1.3rem;
+  display: block;
 }
 
 .game {
@@ -153,7 +161,13 @@ button {
   color: #fff;
   box-shadow: 0 0 0 3px var(--main-color) inset;
 }
-
+.game__choices-computer,
+.game__choices-player {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .game__choices-player > button {
   cursor: pointer;
 }
@@ -163,7 +177,55 @@ button {
   background-color: var(--main-color);
 }
 
-.score__player > span,
-.score__computer > span {
+.score__player,
+.score__computer {
   display: block;
+}
+
+.results {
+  display: none;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 0;
+  padding: 0 2rem;
+}
+
+.log > p {
+  width: fit-content;
+}
+
+p::first-letter {
+  text-transform: capitalize;
+}
+
+.refresh {
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 15px 7px;
+  max-width: 30%;
+  border: 2px solid #3ea289;
+  background-color: var(--secondary-color);
+}
+
+.pick-animation {
+  border: 0.5px solid #3ea289;
+  -webkit-box-shadow: 0px 1px 5px 0px #3ea289;
+  box-shadow: 0px 1px 5px 0px #3ea289;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  color: white;
+}
+
+.main__text {
+  text-align: center;
 }
