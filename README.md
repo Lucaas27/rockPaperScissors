@@ -18,5 +18,3 @@ I had a bit of a struggle figuring out how to remove a css transition that I add
 - There is a log where the player can see the results for past rounds.
 - The first to reach 5 points win the game.
 - A button to restart the game will appear when the game is over.
-
-[DEMO](https://lucaas27.github.io/rockPaperScissors)
